@@ -6,20 +6,23 @@
     android:layout_height="match_parent"
     tools:context="com.example.nathanmorgenstern.rockpaperscissors.MainActivity">
 
-    <Button
-        android:id="@+id/paperButton"
+    <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Paper"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toRightOf="@+id/rockButton"
-        app:layout_constraintRight_toLeftOf="@+id/scissorsButton"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Rock, Paper, Scissors Game!"
+        app:layout_constraintBottom_toTopOf="@+id/paperButton"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/rockButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="onRockClick"
         android:text="Rock"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -27,9 +30,21 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
+        android:id="@+id/paperButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onPaperClick"
+        android:text="Paper"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/rockButton"
+        app:layout_constraintRight_toLeftOf="@+id/scissorsButton"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
         android:id="@+id/scissorsButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="onScissorsClick"
         android:text="Scissors"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toRightOf="@+id/paperButton"
